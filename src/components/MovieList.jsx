@@ -3,11 +3,11 @@
 import { FaShoppingCart, FaStar } from "react-icons/fa";
 import { VscCircleFilled } from "react-icons/vsc";
 import MovieModal from "./MovieModal";
-import { useCart } from "./CartContext";
-import { useState } from "react";
+import { CartContext} from "./CartContext";
+import { useContext, useState } from "react";
 
 const MovieList = ({ movies }) => {
-  const { addToCart } = useCart();
+  const { addToCart } = useContext(CartContext);
   const [movieModal, setMovieModal] = useState(null);
 
   const handleAddToCart = (movie) => {

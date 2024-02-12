@@ -1,10 +1,11 @@
 /* eslint react/prop-types: 0 */
 
-import { useCart } from "./CartContext";
+import { useContext } from "react";
+import { CartContext } from "./CartContext";
 import { FaShoppingCart } from "react-icons/fa";
 
 const CartModal = ({ closeCartModal }) => {
-  const { cart, removeFromCart } = useCart();
+  const { cart, removeFromCart } = useContext(CartContext);
 
   const totalItems = () => {
     return cart.length;

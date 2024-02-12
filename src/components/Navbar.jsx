@@ -1,12 +1,12 @@
 /* eslint react/prop-types: 0 */
 
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { FaBell, FaShoppingCart, FaUser, FaVideo } from "react-icons/fa";
-import { useCart } from "./CartContext";
+import { CartContext} from "./CartContext";
 import CartModal from "./CartModal";
 
 const Navbar = () => {
-  const { cart } = useCart();
+  const { cart } = useContext(CartContext);
   const [cartModal, setCartModal] = useState(false);
 
   const openCartModal = () => {

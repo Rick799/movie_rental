@@ -1,6 +1,6 @@
 /* eslint react/prop-types: 0 */
 
-import { createContext, useContext, useState } from "react";
+import { createContext, useState } from "react";
 
 const CartContext = createContext();
 
@@ -26,8 +26,8 @@ const CartProvider = ({ children }) => {
   );
 };
 
-export const useCart = () => {
-  return useContext(CartContext);
-};
+// export const useCart = () => {
+//   return useContext(CartContext);
+// };
 
 export { CartContext, CartProvider };
